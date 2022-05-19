@@ -9,6 +9,8 @@
 # [backgound]  Wait for, and read a line from the serial port into RESP,
 # max 128 characters, timeout=10s, then output $RESP
 #
+# (c) 2019 Kevin Godden
+#
 (read -n128 -t10 RESP < $2; echo $RESP)&
  
 # Hack - use read to pause for 200ms to give previous
